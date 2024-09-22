@@ -1,5 +1,4 @@
 package com.example.demo.controller;
-
 import com.example.demo.maapper.UserMapper;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,7 +20,6 @@ JavaMailSender sender;
              session.setAttribute("email", email);
              session.setAttribute("code",randomString);
          SimpleMailMessage message = new SimpleMailMessage();
-
              message.setSubject("你的验证码");
              message.setText(randomString);
              message.setTo(email); // 设置邮件发送给谁，可以多个
